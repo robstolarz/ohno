@@ -93,6 +93,9 @@ def ohnoify(inpath, outpath, debug, thresholdtype):
       cv2.waitKey(0)
     cv2.destroyAllWindows()
 
+    if len(rectcontours) < 3:
+      raise NotEnoughPanelsError(f"this comic ({inpath}) has too few panels, aborting")
+
 if __name__ == "__main__":
   parser = argparse.ArgumentParser(description='Cut the last panel out of a comic with CV.')
   # TODO: add stdin support (filename "-")
