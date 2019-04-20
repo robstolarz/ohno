@@ -1,0 +1,3 @@
+[submodule "tumblr-utils"]
+	path = tumblr-utils
+	url = https://github.com/bbolli/tumblr-utils
